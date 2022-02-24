@@ -37,7 +37,7 @@ class App extends React.Component {
     this.state = {
       ...initialForm,
       savedCards: localStorage.savedCards ? JSON.parse(localStorage.savedCards) : [],
-      hasTrunfo: false,
+      hasTrunfo: localStorage.hasTrunfo && localStorage.hasTrunfo === 'true',
       filter: {
         name: '',
         rare: 'todas',
@@ -86,8 +86,9 @@ class App extends React.Component {
       }],
       hasTrunfo: hasTrunfo || form.cardTrunfo,
     }), () => {
-      const { savedCards } = this.state;
+      const { form: { cardTrunfo }, savedCards, hasTrunfo } = this.state;
       localStorage.savedCards = JSON.stringify(savedCards);
+      localStorage.hasTrunfo = hasTrunfo || cardTrunfo;
     });
     this.setState(initialForm);
   }
@@ -152,8 +153,9 @@ class App extends React.Component {
     this.setState({
       savedCards: savedCards.filter((_, index) => index !== cardIndex),
     }, () => {
-      const { savedCards } = this.state;
+      const { form: { cardTrunfo }, savedCards, hasTrunfo } = this.state;
       localStorage.savedCards = JSON.stringify(savedCards);
+      localStorage.hasTrunfo = hasTrunfo || cardTrunfo;
     });
   }
 
