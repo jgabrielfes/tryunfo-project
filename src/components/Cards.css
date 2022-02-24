@@ -1,0 +1,83 @@
+.cards-section-container {
+  background-color: #fafafa;
+  border-top: 10px solid #023031;
+  min-height: calc(100vh - 70px);
+  padding: 20px;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.cards-section-container > h1, .filter-container > h3 {
+  color: #444955;
+  margin-top: 0;
+  text-align: center;
+}
+
+.filter-container {
+  border-radius: 10px;
+  box-shadow: 0 0 4px black;
+  margin: 0 auto;
+  padding: 10px;
+  width: 20%;
+}
+
+.filter-container > label > input:not( [ type = 'checkbox' ] ) {
+  border: 1px solid #444955;
+  border-radius: 7px;
+  margin: 0 0 10px;
+  padding: 10px;
+  width: calc(100% - 22px);
+}
+
+.filter-container > label > select {
+  border: 1px solid #444955;
+  border-radius: 7px;
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.cards-container > div {
+  padding: 8px;
+  text-align: center;
+  transition-duration: 300ms;
+}
+
+.cards-container > div > div {
+  box-shadow: 0 0 15px 5px black;
+  transition-duration: 300ms;
+}
+
+.cards-container > div:hover {
+  transform: scale(1.1);
+}
+
+.cards-container > div:hover > div {
+  box-shadow: 0 0 30px 5px black;
+}
+
+.cards-container > div > button {
+  background-color: #003be5;
+  border: 3px solid #003be5;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.1em;
+  margin: 20px auto 0;
+  padding: 5px 30px;
+  transition-duration: 300ms;
+}
+
+.cards-container > div > button:hover {
+  background-color: transparent;
+  color: #003be5;
+  cursor: pointer;
+}

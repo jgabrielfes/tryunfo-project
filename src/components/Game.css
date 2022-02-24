@@ -1,0 +1,127 @@
+.game-container {
+  align-items: center;
+  background-color: #023031;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.game-cards-container {
+  display: flex;
+  justify-content: space-between;
+  width: 632px;
+}
+
+.game-btn {
+  background-color: #003be5;
+  border: 3px solid #003be5;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: auto;
+  padding: 10px 80px;
+  transition-duration: 300ms;
+}
+
+.game-btn:hover {
+  background-color: transparent;
+  border-color: white;
+  cursor: pointer;
+}
+
+.shuffle-btn {
+  background-color: #003be5;
+  border: 3px solid #003be5;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  opacity: 0;
+  padding: 10px 80px;
+  transition-duration: 300ms;
+}
+
+.shuffle-btn.last-card {
+  opacity: 1;
+}
+
+.shuffle-btn.last-card:hover {
+  background-color: transparent;
+  border-color: white;
+  cursor: pointer;
+}
+
+.game-card-container {
+  padding: 8px;
+  text-align: center;
+}
+
+.game-card-container > p {
+  color: white;
+  font-size: 1em;
+  margin: 10px 0 0;
+  padding: 5px 20px;
+}
+
+.next-card-btn {
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  font-size: 1em;
+  margin-top: 10px;
+  padding: 5px 20px;
+  text-decoration: underline;
+  transition: 300ms;
+}
+
+.next-card-btn:after {
+  content: '\00bb';
+  margin-left: 5px;
+  transition: 300ms;
+}
+
+.next-card-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.next-card-btn:hover:after {
+  margin-left: 10px;
+}
+
+.example-card {
+  background-color: #036b52;
+  border-radius: 5px;
+  color: white;
+  height: 380px;
+  outline: 8px solid white;
+  padding: 15px;
+  position: relative;
+  text-align: center;
+  width: 255px;
+}
+
+.example-card > p {
+  background-color: #16483c;
+  border: 10px solid #023031;
+  border-radius: 50%;
+  font-size: 1.5em;
+  font-weight: 700;
+  left: 50%;
+  margin: 0;
+  outline: 1px solid #2fc18c;
+  outline-offset: 7px;
+  padding: 1.5em 0.33em;
+  position: absolute;
+  text-decoration: underline;
+  text-decoration-color: #2fc18c;
+  top: 50%;
+  transform: rotate(-10deg) scale(1.6) translate(-50%, -50%);
+  transform-origin: top left;
+  width: fit-content;
+}
