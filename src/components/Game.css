@@ -6,6 +6,7 @@
   gap: 28px;
   height: 100vh;
   justify-content: center;
+  position: relative;
   width: 100%;
 }
 
@@ -130,6 +131,13 @@
   .game-container {
     height: 1000px;
     justify-content: flex-start;
+  }
+
+  .game-btn {
+    left: 50%;
+    position: absolute;
+    top: 500px;
+    transform: translate(-50%, -50%);
   }
 
   .game-cards-container {
