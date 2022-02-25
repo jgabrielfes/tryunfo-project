@@ -37,7 +37,7 @@ class App extends React.Component {
     this.state = {
       ...initialForm,
       savedCards: localStorage.savedCards ? JSON.parse(localStorage.savedCards) : [],
-      hasTrunfo: localStorage.hasTrunfo && localStorage.hasTrunfo === 'true',
+      hasTrunfo: localStorage.hasTrunfo === 'true',
       filter: {
         name: '',
         rare: 'todas',

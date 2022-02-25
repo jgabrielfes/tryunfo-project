@@ -17,8 +17,9 @@
   border-radius: 10px;
   box-shadow: 0 0 4px black;
   margin: 0 auto;
+  min-width: 350px;
   padding: 10px;
-  width: 20%;
+  width: 30%;
 }
 
 .filter-container > label > input:not( [ type = 'checkbox' ] ) {
