@@ -43,10 +43,14 @@ class Form extends React.Component {
               <textarea
                 id="description-input"
                 value={ cardDescription }
+                maxLength="160"
                 onChange={ onInputChange }
                 data-testid="description-input"
               />
             </label>
+            <p className="mini-label">
+              { `${cardDescription.length}/160` }
+            </p>
             <Input
               id="attr1-input"
               type="number"
@@ -71,7 +75,7 @@ class Form extends React.Component {
             >
               Attr03
             </Input>
-            <p className={ remainingPoints < 0 ? 'negative' : '' }>
+            <p className={ remainingPoints < 0 ? 'mini-label negative' : 'mini-label' }>
               { `Pontos restantes = ${remainingPoints}` }
             </p>
             <Input

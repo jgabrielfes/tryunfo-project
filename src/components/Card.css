@@ -18,6 +18,7 @@
   font-weight: 700;
   height: 1.5em;
   margin: 0;
+  overflow: hidden;
   padding: 2px 15px;
   text-align: right;
 }
@@ -34,6 +35,7 @@
   font-size: 0.55em;
   margin: 0;
   text-align: justify;
+  overflow-wrap: break-word;
   transform: rotate(-6.3deg) translateY(-13px);
 }
 
@@ -41,7 +43,7 @@
   background-color: white;
   border-radius: 0 0 8px 8px;
   bottom: 15px;
-  clip-path: polygon(0 19%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -50,7 +52,7 @@
   padding: 30px 0 0;
   position: absolute;
   right: 15px;
-  top: 61%;
+  top: 62%;
 }
 
 .attr-paragraph {

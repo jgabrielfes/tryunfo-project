@@ -47,7 +47,10 @@ class App extends React.Component {
         shuffledCards: [],
         currentGameCard: 0,
       },
-      alert: false,
+      alert: {
+        message: '',
+        open: false,
+      },
     };
   }
 
@@ -56,13 +59,19 @@ class App extends React.Component {
       return;
     }
 
-    this.setState({ alert: false });
+    this.setState(({ alert }) => ({ alert: {
+      ...alert,
+      open: false,
+    } }));
   }
 
   onGameStart() {
     const { savedCards } = this.state;
     if (savedCards.length < 2) {
-      this.setState({ alert: true });
+      this.setState({ alert: {
+        message: 'Você precisa de ao menos duas cartas no baralho para iniciar',
+        open: true,
+      } });
       return false;
     }
     this.setState({ game: {
@@ -122,7 +131,10 @@ class App extends React.Component {
   onNextButtonClick() {
     const { game: { shuffledCards, currentGameCard } } = this.state;
     if (currentGameCard === shuffledCards.length - 1) {
-      console.log('Já está na última');
+      this.setState({ alert: {
+        message: 'Você já está na última carta do baralho',
+        open: true,
+      } });
       return false;
     }
     this.setState({ game: {
@@ -191,12 +203,12 @@ class App extends React.Component {
         />
         <Snackbar
           anchorOrigin={ { vertical: 'top', horizontal: 'center' } }
-          open={ alert }
+          open={ alert.open }
           autoHideDuration={ 5000 }
           onClose={ this.handleAlert }
         >
           <Alert onClose={ this.handleAlert } variant="filled" severity="error">
-            Você deve ter pelo menos duas cartas adicionadas no baralho
+            { alert.message }
           </Alert>
         </Snackbar>
         <Game
