@@ -99,3 +99,9 @@
   top: 31%;
   transform: rotate(-10deg);
 }
+
+@media (max-width: 720px) {
+  .tryunfo-card {
+    size: 0.5em;
+  }
+}

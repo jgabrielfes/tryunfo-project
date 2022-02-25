@@ -108,3 +108,15 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media (max-width: 720px) {
+  .form-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .form-section, .card-section {
+    height: calc(100vh - 100px);
+    width: calc(100% - 100px);
+  }
+}

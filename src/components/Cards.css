@@ -81,3 +81,13 @@
   color: #003be5;
   cursor: pointer;
 }
+
+@media (max-width: 720px) {
+  .cards-section-container {
+    border: none;
+  }
+
+  .filter-container {
+    width: 90%;
+  }
+}

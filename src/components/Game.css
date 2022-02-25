@@ -125,3 +125,24 @@
   transform-origin: top left;
   width: fit-content;
 }
+
+@media (max-width: 720px) {
+  .game-container {
+    height: 1000px;
+    justify-content: flex-start;
+  }
+
+  .game-cards-container {
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .game-cards-container:nth-child(1) {
+    transform: scale(0.8);
+  }
+
+  .shuffle-btn {
+    margin-top: -90px;
+  }
+}
